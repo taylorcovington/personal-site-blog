@@ -1,0 +1,37 @@
+---
+title: How I built this blog using Remix, MDX, and Vercel
+date: 2022-03-31
+meta: 
+  title: How I built this blog
+  description: This is a quick blog post on how I build this blog using Remix, MDX, and Vercel
+---
+
+## {attributes.title}
+
+What is Remix
+What is MDX
+
+
+```js
+function helloWorld() {
+
+}
+```
+
+How to show syntax highlighting
+- You can use either Prism or highlight.js.
+- I'm currently using highlight.js 
+` npm install rehype-highlight`
+- this is a rehype pluggin  using highlight.js
+Inside `remix.confix.js` add
+
+```js
+ mdx: async filename => {
+    const [rehypeHighlight] = await Promise.all([
+      import("rehype-highlight").then(mod => mod.default),
+    ])
+    return {
+      rehypePlugins: [rehypeHighlight],
+    }
+  }
+```

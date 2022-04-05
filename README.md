@@ -50,3 +50,10 @@ netlify deploy
 # production deployment
 netlify deploy --prod
 ```
+
+
+    "build": "npm run build:css && remix build",
+    "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
+    "dev": "concurrently \"npm run dev:css\" \"cross-env NODE_ENV=development netlify dev\"",
+    "dev:css": "tailwindcss -i ./styles/app.css -o app/styles/app.css --Watch",
+    "postinstall": "remix setup node"
