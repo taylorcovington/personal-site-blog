@@ -1,7 +1,7 @@
 export default function Hero() {
   return(
     <div
-    className="relative bg-gray-800 overflow-hidden"
+    className="relative bg-gray-800 overflow-hidden flex justify-center"
     style={{ height: "37rem" }}
   >
     <div
@@ -80,8 +80,8 @@ export default function Hero() {
       <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
         <div className="text-center">
           <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl">
-            <div className="md:block">Taylor Covington</div>{" "}
-            <div className="text-indigo-400 md:block">JS Frontend Engineer</div>
+            <div className="md:block mb-2">Taylor Covington</div>{" "}
+            <div className="text-indigo-400 md:block">JavaScript Engineer</div>
           </h1>
           <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
             Helping companies bring desings to life.

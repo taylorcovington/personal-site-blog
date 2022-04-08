@@ -8,6 +8,7 @@ import * as thirdPost from './blog/third-post.mdx'
 import FeatureList from '../components/FeatureList';
 import TrustedBy from '../components/TrustedBy';
 import ContactMe from '../components/Contact';
+import AboutMe from "~/components/AboutMe";
 
 function postFromModule(mod: any) {
   return {
@@ -27,6 +28,7 @@ export default function Index() {
       <Hero />
       <LatestPosts posts={posts}/>
       <FeatureList />
+      {/* <AboutMe /> */}
       <TrustedBy />
       <ContactMe />
     </>

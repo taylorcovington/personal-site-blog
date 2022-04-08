@@ -9,6 +9,7 @@ import {
 } from "@remix-run/react";
 import { LinksFunction } from "@remix-run/node"
 import styles from './styles/app.css'
+import Layout from "./components/Layout";
 
 export const links: LinksFunction = () => {
   return [
@@ -33,7 +34,9 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <Layout>
+          <Outlet />
+        </Layout>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
