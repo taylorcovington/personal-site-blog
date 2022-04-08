@@ -8,7 +8,8 @@ interface BlogPostFullListProps {
   archiveUrl?: string;
 }
 
-function BlogPostFullList({ heading, subheading, posts, archiveUrl }: BlogPostFullListProps) {
+function BlogPostFullList({ heading, subheading, posts = [], archiveUrl }: BlogPostFullListProps) {
+  console.log('posts blog full', posts)
   return (
     <div className="relative bg-gray-50 px-4 sm:px-6  lg:px-8">
       <div className="absolute inset-0">

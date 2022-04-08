@@ -1,13 +1,11 @@
 import BlogPostPreviewGrid from "./BlogPostPreviewList";
 import { IBlogPost } from '../../interfaces/interfaces';
-import { Link } from "@remix-run/react";
 
 interface LatestPostProps {
   posts: IBlogPost[];
 }
 
 export default function LatestPosts({ posts }: LatestPostProps) {
-  console.log(posts)
   return (
     <BlogPostPreviewGrid
       heading="From the blog"

@@ -1,12 +1,11 @@
 
 import { format } from "date-fns";
-import { Link, useLoaderData } from "@remix-run/react";
+import { Link } from "@remix-run/react";
 import { IBlogPost } from '../../interfaces/interfaces';
 
 interface PostPreviewProps {
   postData: IBlogPost;
 }
-
 
 export default function PostPreview({ postData }: PostPreviewProps) {
   const { title, description, author, uploadDate, readTime, slug } = postData;
