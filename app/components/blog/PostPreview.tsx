@@ -10,7 +10,6 @@ interface PostPreviewProps {
 export default function PostPreview({ postData }: PostPreviewProps) {
   const { title, description, author, uploadDate, readTime, slug } = postData;
 
-
   return (
     <Link to={`/blog/${slug}`}>
       <div

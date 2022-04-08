@@ -21,11 +21,15 @@ export default function BlogPostPreviewList(props: BlogPostPreviewProps) {
       </div>
       <div className="relative max-w-7xl mx-auto">
         <BlogHeading heading={heading} subheading={subheading} />
-        <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-          {posts.map((post: IBlogPost) => {
-            return <PostPreview key={post.slug} postData={post} />;
-          })}
-        </div>
+        {posts.length > 0 ? (
+          <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+            {posts.map((post: IBlogPost) => {
+              return <PostPreview key={post.slug} postData={post} />;
+            })}
+          </div>
+        ) : (
+          <div className="flex justify-center"><p>No posts yet</p></div>
+        )}
       </div>
       {/* <Link to="/blog" className="pointer">
         Check out more posts

@@ -6,15 +6,13 @@ import ContactMe from '../components/Contact';
 import AboutMe from "~/components/AboutMe";
 import useBlogPosts from '../hooks/useBlogPosts';
 
-
-
 export default function Index() {
   const posts = useBlogPosts()
 
   return (
     <>
       <Hero />
-      <LatestPosts posts={posts.slice(0, 3)}/>
+      <LatestPosts posts={posts?.slice(0, 3)}/>
       <FeatureList />
       {/* <AboutMe /> */}
       <TrustedBy />

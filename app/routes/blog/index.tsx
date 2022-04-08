@@ -6,14 +6,12 @@ export default function BlogIndex() {
   console.log('posts inside blogindex: ', posts)
   return (
     <>
-      {posts && (
-        <BlogPostFullList
+      <BlogPostFullList
         heading="Welcome to my blog"
         subheading="You'll find posts about full-stack development, career tips, and dev resources."
         posts={posts}
         archiveUrl="/archive/"
-        />
-      )}
+      />
     </>
   )
 }

@@ -17,11 +17,11 @@ function BlogPostFullList({ heading, subheading, posts = [], archiveUrl }: BlogP
       </div>
       <div className="relative max-w-7xl mx-auto">
         <BlogHeading heading={heading} subheading={subheading} />
-        <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-        {posts.map((post: any) => (
-          <PostPreview key={post.slug} postData={post} />
-        ))}
+        {posts.length > 0 ? posts.map((post: any) => (
+        <div key={post.slug} className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+          <PostPreview  postData={post} />
         </div>
+        )): <div className="flex justify-center"><p>No posts yet</p></div>}
       </div>
       {/* <Link to="/blog" className="pointer">
         Check out more posts
