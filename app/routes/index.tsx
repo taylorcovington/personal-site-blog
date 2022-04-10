@@ -15,7 +15,8 @@ export default function Index() {
       <LatestPosts posts={posts?.slice(0, 3)}/>
       <FeatureList />
       {/* <AboutMe /> */}
-      <TrustedBy />
+      {/* <TrustedBy /> */}
+      {/* <Testimonials /> */}
       <ContactMe />
     </>
   );
