@@ -52,7 +52,7 @@ const Header = () => (
             <span className="inline-flex rounded-md shadow">
               <a
                 href="#contactMe"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-[#00AEEF] bg-white hover:bg-gray-50"
               >
                 Work with Me
               </a>

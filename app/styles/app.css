@@ -1990,6 +1990,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(99 102 241 / var(--tw-border-opacity));
 }
 
+.focus\:border-\[\#00AEEF\]:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 174 239 / var(--tw-border-opacity));
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -2008,6 +2013,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .focus\:ring-indigo-500:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(99 102 241 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-\[\#00AEEF\]:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(0 174 239 / var(--tw-ring-opacity));
 }
 
 .focus\:ring-offset-2:focus {
