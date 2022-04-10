@@ -1322,6 +1322,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 2.5rem;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .w-screen {
   width: 100vw;
 }
@@ -1348,6 +1352,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-10 {
   width: 2.5rem;
+}
+
+.w-\[11\.5rem\] {
+  width: 11.5rem;
 }
 
 .max-w-7xl {
