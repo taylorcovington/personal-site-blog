@@ -64,7 +64,7 @@ const AboutMe = () => {
           <div className="mt-8 lg:mt-0">
             <div className="mx-auto text-base max-w-prose lg:grid lg:gap-8 lg:max-w-none">
               <div>
-                <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+                <h2 className="text-base text-[#00AEEF] font-semibold tracking-wide uppercase">
                   About
                 </h2>
                 <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">

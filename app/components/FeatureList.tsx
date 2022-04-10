@@ -68,7 +68,7 @@ export default function FeatureList() {
               className="flex flex-col bg-white rounded-2xl shadow-xl"
             >
               <div className="flex-1 relative pt-16 px-6 pb-8 md:px-8">
-                <div className="absolute top-0 p-5 inline-block bg-indigo-600 rounded-xl shadow-lg transform -translate-y-1/2">
+                <div className="absolute top-0 p-5 inline-block bg-[#00AEEF] rounded-xl shadow-lg transform -translate-y-1/2">
                   <link.icon
                     className="h-6 w-6 text-white"
                     aria-hidden="true"
