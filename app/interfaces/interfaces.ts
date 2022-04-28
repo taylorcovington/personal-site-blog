@@ -6,4 +6,5 @@ export interface IBlogPost {
   author: string;
   uploadDate: string;
   readTime: string;
+  image: string;
 }

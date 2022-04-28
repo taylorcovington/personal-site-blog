@@ -8,7 +8,7 @@ interface PostPreviewProps {
 }
 
 export default function PostPreview({ postData }: PostPreviewProps) {
-  const { title, description, author, uploadDate, readTime, slug } = postData;
+  const { image, title, description, author, uploadDate, readTime, slug } = postData;
 
   return (
     <Link to={`/blog/${slug}`}>
@@ -16,6 +16,11 @@ export default function PostPreview({ postData }: PostPreviewProps) {
         className="flex flex-col rounded-lg shadow-lg overflow-hidden"
       >
         <div className="flex-shrink-0">
+        <img
+              src={image}
+              className="h-48 w-full object-cover"
+              alt={'trees'}
+            />
           {/* {mainImage && mainImage.asset && (
             <img
               src={imageUrlFor(buildImageObj(mainImage))

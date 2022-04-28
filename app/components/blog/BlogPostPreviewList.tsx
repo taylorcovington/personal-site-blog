@@ -12,13 +12,10 @@ interface BlogPostPreviewProps {
 }
 
 export default function BlogPostPreviewList(props: BlogPostPreviewProps) {
-  const { heading, subheading, posts = [], archiveUrl = '' } = props;
+  const { heading, subheading, posts = [] } = props;
   return (
     <>
     <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
-      <div className="absolute inset-0">
-        <div className="bg-white h-1/3 sm:h-2/3" />
-      </div>
       <div className="relative max-w-7xl mx-auto">
         <BlogHeading heading={heading} subheading={subheading} />
         {posts.length > 0 ? (
@@ -30,16 +27,13 @@ export default function BlogPostPreviewList(props: BlogPostPreviewProps) {
         ) : (
           <div className="flex justify-center"><p>No posts yet</p></div>
         )}
-      </div>
-      {/* <Link to="/blog" className="pointer">
-        Check out more posts
-      </Link> */}
-    </div>
-      {archiveUrl && (
-          <Link to="/blog" className="pointer">
+        <div className="flex justify-center mt-12">
+          <Link to="/blog" className="text-base font-semibold text-cyan-600 hover:text-cyan-500">
             Check out more posts
           </Link>
-      )}
+        </div>
+      </div>
+    </div>
       </>
   )
 }
