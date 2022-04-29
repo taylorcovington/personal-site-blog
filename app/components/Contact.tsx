@@ -71,6 +71,8 @@ const ContactMe = () => {
               data-netlify="true"
               netlify-honeypot="bot-field"
               className="grid grid-cols-1 gap-y-6"
+              // @ts-ignore
+              netlify
             >
               <input type="hidden" name="form-name" value="contact-form" />
               <input
