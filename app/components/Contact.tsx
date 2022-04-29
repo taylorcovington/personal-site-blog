@@ -67,12 +67,12 @@ const ContactMe = () => {
           <div className="max-w-lg mx-auto lg:max-w-none">
             <form
               method="post"
-              name="contact-form v2"
+              name="contact-form"
               data-netlify="true"
               netlify-honeypot="bot-field"
               className="grid grid-cols-1 gap-y-6"
             >
-              <input type="hidden" name="form-name" value="contact-form v2" />
+              <input type="hidden" name="form-name" value="contact-form" />
               <input
                 type="text"
                 name="name"
