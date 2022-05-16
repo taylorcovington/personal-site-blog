@@ -1,29 +1,6 @@
 import { MailIcon, PhoneIcon } from "@heroicons/react/outline";
 
 const ContactMe = () => {
-  // const [state, setState] = useState({
-  //   name: "",
-  //   email: "",
-  //   phone: "",
-  //   message: "",
-  // });
-  // const [successModal, setSuccessModal] = useState(false);
-
-  // const handleChange = (event) => {
-  //   const value = event.target.value;
-  //   const name = event.target.name;
-  //   setState({
-  //     ...state,
-  //     [name]: value,
-  //   });
-  // };
-
-  // const handleAction = () => {
-  //   alert("success!");
-  // };
-
-  // console.log("state: ", state);
-
   return (
     <div id="contactMe" className="relative bg-white">
       <div className="absolute inset-0">
@@ -72,7 +49,7 @@ const ContactMe = () => {
               netlify-honeypot="bot-field"
               className="grid grid-cols-1 gap-y-6"
               // @ts-ignore
-              netlify
+              netlify="true"
             >
               <input type="hidden" name="form-name" value="contact-form" />
               <input

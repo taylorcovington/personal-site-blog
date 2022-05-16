@@ -1,9 +1,9 @@
 import BlogPostFullList from '../../components/blog/BlogPostFullList';
 import { useLoaderData } from "@remix-run/react";
 import { LoaderFunction } from "@remix-run/node"
-import * as firstPost from './first-post.mdx'
-import * as secondPost from './second-post.mdx'
-import * as thirdPost from './third-post.mdx'
+import * as postOne from './how-i-built-this-blog.mdx'
+import * as postTwo from './five-soft-skills.mdx'
+import * as postThree from './increase-productivity-in-5-steps.mdx'
 
 function postFromModule(mod: any) {
   return {
@@ -13,7 +13,11 @@ function postFromModule(mod: any) {
 }
 
 export const loader: LoaderFunction = () => {
-  return [postFromModule(firstPost), postFromModule(secondPost),postFromModule(thirdPost)]
+  return [
+    postFromModule(postOne), 
+    postFromModule(postTwo),
+    postFromModule(postThree)
+  ]
 }
 
 export default function BlogIndex() {

@@ -7,9 +7,11 @@ import AboutMe from "~/components/AboutMe";
 import useBlogPosts from '../hooks/useBlogPosts';
 import { useLoaderData } from "@remix-run/react";
 import { LoaderFunction } from "@remix-run/node"
-import * as firstPost from './blog/first-post.mdx'
-import * as secondPost from './blog/second-post.mdx'
-import * as thirdPost from './blog/third-post.mdx'
+import * as postOne from './blog/how-i-built-this-blog.mdx'
+import * as postTwo from './blog/five-soft-skills.mdx'
+import * as postThree from './blog/increase-productivity-in-5-steps.mdx'
+import Testimonials from "~/components/Testimonials";
+import Testimonial from "~/components/Testimonial";
 
 
 function postFromModule(mod: any) {
@@ -20,9 +22,12 @@ function postFromModule(mod: any) {
 }
 
 export const loader: LoaderFunction = () => {
-  return [postFromModule(firstPost), postFromModule(secondPost),postFromModule(thirdPost)]
+  return [
+    postFromModule(postOne), 
+    postFromModule(postTwo),
+    postFromModule(postThree)
+  ]
 }
-
 
 export default function Index() {
   const posts = useLoaderData()
@@ -32,9 +37,10 @@ export default function Index() {
       <Hero />
       <LatestPosts posts={posts?.slice(0, 3)}/>
       <FeatureList />
-      {/* <AboutMe /> */}
-      {/* <TrustedBy /> */}
+      <AboutMe />
+      <Testimonial />
       {/* <Testimonials /> */}
+      {/* <TrustedBy /> */}
       <ContactMe />
     </>
   );
