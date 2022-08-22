@@ -84,7 +84,7 @@ export default function Hero() {
             <div className="text-[#00AEEF] md:block">Shopify Ecom Engineer</div>
           </h1>
           <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            I help ecommerce companies get their store on branch and converting.
+            I help ecommerce companies get their store right by building high converting custom themes.
           </p>
           <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
                 <div
