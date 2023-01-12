@@ -1,9 +1,9 @@
 import photo from '../../public/images/tc_mob_sm.jpeg'
 
 const aboutMe = [
-  "Hi there! I'm Taylor Covington, a full-time Software Engineer and freelancer. I'm also married and we have three boys! In my spare time I enjoy riding dirt bikes, being outdoors, and working on personal projects.",
-  "During the day I work as a Frontend Software Engineer for an enterprise application with a large team. On a daily basis I work with React, Apollo/GraphQL, and MUI. I also do part-time contract work building full-stack applications and APIs.",
-  "I'm a huge fan of the web, and I'm always looking to learn new things. I'm currently working on this blog to share my thoughts and learnings. As I'm learning how to improve as a developer, I'm also sharing those experiences here.",
+  "Hi there! I'm Taylor Covington, a full-time Software Engineer and freelancer.",
+  "During the day I work as a Frontend Software Engineer for an enterprise application with a large team. On a daily basis I work with React, Apollo/GraphQL, and MUI. I also do part-time contract work building full-stack applications and data integrations.",
+  "My passion lies in building startups. From production ideation, validation, then to development. I love the full process and I do it with my own products.",
   "I also enjoy helping others learn how to code and land their first developer job. Breaking into development can be very difficult so I want to breakk down these barriers for those that are new to the industry. I'm working on a new ebook to help more people break into development.",
 ]
 

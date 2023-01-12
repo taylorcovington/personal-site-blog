@@ -3,14 +3,14 @@ import { CodeIcon, DatabaseIcon, CloudIcon } from "@heroicons/react/outline";
 
 const supportLinks = [
   {
-    name: "Web App Development",
+    name: "SaaS Development",
     href: "#",
     description:
-      "I turn your app designs into full-stack applications. I work with ReactJS, Node, GraphQL, AWS, and PostgreSQL",
+      "Turn your app designs into full-stack applications. I work with ReactJS, Node, GraphQL, AWS, and PostgreSQL",
     icon: CodeIcon,
   },
   {
-    name: "Website Development",
+    name: "SaaS Landing Page",
     href: "#",
     description:
       "Your website is where you make your first impression and convert users. I work with CSS, HTML, React, and Gatsby to build high converting websites",
@@ -43,19 +43,19 @@ export default function FeatureList() {
         </div>
         <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
-            A Full-Stack Developer
+            A Full-Stack SaaS Developer
           </h1>
           <p className="mt-6 max-w-3xl text-xl text-gray-300">
             Over the years I've been able to work on many diverse projects. From
             full-stack JavaScript (React, Node, Express, GraphQL), to building
-            servless API's using Node and AWS API Gateway.
+            servless API's using Node and AWS API Gateway. I've worked for small startups and enterprise projects.
           </p>
         </div>
       </div>
 
       {/* Overlapping cards */}
       <section
-        className="-mt-32 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8"
+        className="-mt-40 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8"
         aria-labelledby="contact-heading"
       >
         <h2 className="sr-only" id="contact-heading">

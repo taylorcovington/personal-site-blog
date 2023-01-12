@@ -1,110 +1,68 @@
+import startupImg from '../../public/images/startup.svg'
+
 export default function Hero() {
   return(
-    <div
-    className="relative bg-gray-800 overflow-hidden flex justify-center"
-    style={{ height: "37rem" }}
-  >
-    <div
-      className="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full"
-      aria-hidden="true"
-    >
-      <div className="relative h-full max-w-7xl mx-auto">
-        <svg
-          className="absolute right-full transform translate-y-1/4 translate-x-1/4 lg:translate-x-1/2"
-          width={404}
-          height={784}
-          fill="none"
-          viewBox="0 0 404 784"
-        >
-          <defs>
-            <pattern
-              id="f210dbf6-a58d-4871-961e-36d5016a0f49"
-              x={0}
-              y={0}
-              width={20}
-              height={20}
-              patternUnits="userSpaceOnUse"
-            >
-              <rect
-                x={0}
-                y={0}
-                width={4}
-                height={4}
-                className="text-gray-700"
-                fill="currentColor"
-              />
-            </pattern>
-          </defs>
-          <rect
-            width={404}
-            height={784}
-            fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)"
-          />
-        </svg>
-        <svg
-          className="absolute left-full transform -translate-y-3/4 -translate-x-1/4 md:-translate-y-1/2 lg:-translate-x-1/2"
-          width={404}
-          height={784}
-          fill="none"
-          viewBox="0 0 404 784"
-        >
-          <defs>
-            <pattern
-              id="5d0dd344-b041-4d26-bec4-8d33ea57ec9b"
-              x={0}
-              y={0}
-              width={20}
-              height={20}
-              patternUnits="userSpaceOnUse"
-            >
-              <rect
-                x={0}
-                y={0}
-                width={4}
-                height={4}
-                className="text-gray-700"
-                fill="currentColor"
-              />
-            </pattern>
-          </defs>
-          <rect
-            width={404}
-            height={784}
-            fill="url(#5d0dd344-b041-4d26-bec4-8d33ea57ec9b)"
-          />
-        </svg>
-      </div>
-    </div>
-
-    <div className="relative pt-10 pb-16 sm:pb-24">
-      <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
-        <div className="text-center">
-          <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl">
-            <div className="md:block mb-2">Taylor Covington</div>{" "}
-            <div className="text-[#00AEEF] md:block">React Engineer</div>
-          </h1>
-          <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            Helping companies bring desings to life.
-          </p>
-          <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-                <div
-                  className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3"
-                >
-                  <a
-                    href={
-                      "#contactMe"
-                    }
-                    className={
-                      "w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#00AEEF] hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
-                    }
-                  >
-                    Say hi 👋
-                  </a>
+    <div className="relative overflow-hidden">
+    <main>
+        <div className="bg-gray-800 pt-10 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-14">
+          <div className="mx-auto max-w-7xl lg:px-8">
+            <div className="lg:grid lg:grid-cols-2 lg:gap-8">
+              <div className="mx-auto max-w-md px-6 sm:max-w-2xl sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left">
+                <div className="lg:py-16">
+          
+                  <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:mt-6 xl:text-6xl">
+                    <span className="block">SaaS Developer</span>
+                    <span className="block text-[#00AEEF]">Indie Hacker</span>
+                  </h1>
+                  <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                  Sharing what I learn about SaaS dev, freelancing, self improvement & focused work to get more done in less time | Building MacroFlex.
+                  </p>
+                  <p className="mt-3 text-base text-[#00AEEF] sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                  Join the newsletter below!
+                  </p>
+                  <div className="mt-3 sm:mt-6">
+                    <form action="#" className="sm:mx-auto sm:max-w-xl lg:mx-0">
+                      <div className="sm:flex">
+                        <div className="min-w-0 flex-1">
+                          <label htmlFor="email" className="sr-only">
+                            Email address
+                          </label>
+                          <input
+                            id="email"
+                            type="email"
+                            placeholder="Enter your email"
+                            className="block w-full rounded-md border-0 px-4 py-3 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:ring-offset-2 focus:ring-offset-gray-900"
+                          />
+                        </div>
+                        <div className="mt-3 sm:mt-0 sm:ml-3">
+                          <button
+                            type="submit"
+                            className="block w-full rounded-md bg-[#00AEEF] py-3 px-4 font-medium text-white shadow hover:bg-[#00AEEF] focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:ring-offset-2 focus:ring-offset-gray-900"
+                          >
+                            Sign up
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
                 </div>
+              </div>
+              <div className="mt-12 -mb-16 sm:-mb-48 lg:relative lg:m-0">
+                <div className="mx-auto max-w-md px-6 sm:max-w-2xl lg:max-w-none lg:px-0">
+                  {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
+                  <img
+                    className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                    src={startupImg}
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* More main page content here... */}
       </main>
     </div>
-  </div>
   )
 }
