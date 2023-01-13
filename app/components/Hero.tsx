@@ -47,7 +47,7 @@ export default function Hero() {
                   </div>
                 </div>
               </div>
-              <div className="mt-12 -mb-16 sm:-mb-48 lg:relative lg:m-0">
+              <div className="sm:-mb-48 lg:relative lg:m-0">
                 <div className="mx-auto max-w-md px-6 sm:max-w-2xl lg:max-w-none lg:px-0">
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
