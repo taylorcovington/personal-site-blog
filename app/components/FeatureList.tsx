@@ -1,12 +1,12 @@
 import React from "react";
-import { CodeIcon, DatabaseIcon, CloudIcon } from "@heroicons/react/outline";
+import { CodeIcon, DatabaseIcon, DeviceMobileIcon } from "@heroicons/react/outline";
 
 const supportLinks = [
   {
     name: "SaaS Development",
     href: "#",
     description:
-      "Turn your app designs into full-stack applications. I work with ReactJS, Node, GraphQL, AWS, and PostgreSQL",
+      "Turn your app designs into full-stack applications. I work with modern frameworks to build scaleable, performant, and secure applications.",
     icon: CodeIcon,
   },
   {
@@ -17,11 +17,11 @@ const supportLinks = [
     icon: DatabaseIcon,
   },
   {
-    name: "API Development",
+    name: "Mobile Development",
     href: "#",
     description:
-      "I have years of experience building API's using Node, Serverless, and AWS",
-    icon: CloudIcon,
+      "Get your app in the hands of your users, either on iOS or Android.",
+    icon: DeviceMobileIcon,
   },
 ];
 

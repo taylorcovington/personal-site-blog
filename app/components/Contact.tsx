@@ -34,7 +34,7 @@ const ContactMe = () => {
                     className="flex-shrink-0 h-6 w-6 text-gray-400"
                     aria-hidden="true"
                   />
-                  <span className="ml-3">tcovingtondev@gmail.com</span>
+                  <span className="ml-3">taylor@flexedapps.com</span>
                 </dd>
               </div>
             </dl>

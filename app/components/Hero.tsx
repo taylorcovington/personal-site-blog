@@ -21,7 +21,15 @@ export default function Hero() {
                   Join the newsletter below!
                   </p>
                   <div className="mt-3 sm:mt-6">
-                    <form action="#" className="sm:mx-auto sm:max-w-xl lg:mx-0">
+                    <iframe 
+                      title='BeeHiiv Newsletter'
+                      src="https://embeds.beehiiv.com/4198bb30-4b6c-4312-a40c-9c6689f68e23?slim=true" 
+                      data-test-id="beehiiv-embed" 
+                      frameBorder="0" 
+                      scrolling="no" 
+                      style={{margin: "0", borderRadius: "0px !important", backgroundColor: "transparent"}}
+                      ></iframe>
+                    {/* <form action="#" className="sm:mx-auto sm:max-w-xl lg:mx-0">
                       <div className="sm:flex">
                         <div className="min-w-0 flex-1">
                           <label htmlFor="email" className="sr-only">
@@ -43,7 +51,7 @@ export default function Hero() {
                           </button>
                         </div>
                       </div>
-                    </form>
+                    </form> */}
                   </div>
                 </div>
               </div>

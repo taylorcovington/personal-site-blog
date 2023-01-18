@@ -1,10 +1,10 @@
-import photo from '../../public/images/tc_mob_sm.jpeg'
+import photo from '../../public/images/tc_mob_sm.jpg'
 
 const aboutMe = [
   "Hi there! I'm Taylor Covington, a full-time Software Engineer and freelancer.",
-  "During the day I work as a Frontend Software Engineer for an enterprise application with a large team. On a daily basis I work with React, Apollo/GraphQL, and MUI. I also do part-time contract work building full-stack applications and data integrations.",
+  "I currently work as a Software Engineer for an enterprise application with a large team. On a daily basis I work with React, Apollo/GraphQL, and MUI.",
   "My passion lies in building startups. From production ideation, validation, then to development. I love the full process and I do it with my own products.",
-  "I also enjoy helping others learn how to code and land their first developer job. Breaking into development can be very difficult so I want to breakk down these barriers for those that are new to the industry. I'm working on a new ebook to help more people break into development.",
+  "I also enjoy fitness and learning how I can increase productivity.",
 ]
 
 const AboutMe = () => {
@@ -18,10 +18,9 @@ const AboutMe = () => {
               <figure>
                 <div  className="aspect-w-12 aspect-h-7 lg:aspect-none">
                   <img
-                    className="rounded-lg shadow-lg object-cover object-center"
+                    className="rounded-full shadow-lg object-cover object-center"
                     src={photo}
                     alt="profile"
-                    
                     width={1184}
                     height={1376}
                   />
