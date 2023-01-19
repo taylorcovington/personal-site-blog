@@ -15,7 +15,7 @@ export default function Hero() {
                     <span className="block text-[#00AEEF]">Indie Hacker</span>
                   </h1>
                   <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                  Sharing what I learn about SaaS dev, freelancing, self improvement & focused work to get more done in less time | Building MacroFlex.
+                  Sharing what I learn about SaaS dev, self improvement & focused work to get more done in less time | Building MacroFlex.
                   </p>
                   <p className="mt-3 text-base text-[#00AEEF] sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                   Join the newsletter below!

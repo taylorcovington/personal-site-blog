@@ -26,7 +26,7 @@ export default function BlogIndex() {
     <>
       <BlogPostFullList
         heading="Welcome to my blog"
-        subheading="You'll find posts about full-stack development, career tips, and dev resources."
+        subheading="I share what I learn about SaaS dev, self improvement & focused work to get more done in less time."
         posts={posts}
         archiveUrl="/archive/"
       />
