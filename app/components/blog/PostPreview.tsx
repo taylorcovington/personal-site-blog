@@ -8,8 +8,8 @@ interface PostPreviewProps {
 }
 
 export default function PostPreview({ postData }: PostPreviewProps) {
-  const { image, title, description, author, uploadDate, readTime, slug } = postData;
-
+  const { image, title, description, author, uploadDate, readTime, slug, tags } = postData;
+  console.log("tags; ", tags)
   return (
     <Link to={`/blog/${slug}`}>
       <div
@@ -50,7 +50,14 @@ export default function PostPreview({ postData }: PostPreviewProps) {
                 </p>
               ))} */}
             </div>
-
+            <div className="flex mb-3 gap-2">
+             {/* @ts-ignore */}
+           {tags.map(tag => (
+                   <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">
+                    {tag}
+                 </span>
+                ))}
+          </div>
             <a
               // href={post.href}
               className="block mt-2"
@@ -93,8 +100,10 @@ export default function PostPreview({ postData }: PostPreviewProps) {
                 </time>
                 <span aria-hidden="true">&middot;</span>
                 <span>{readTime} min read</span>
+              
               </div>
             </div>
+             
           </div>
         </div>
       </div>
