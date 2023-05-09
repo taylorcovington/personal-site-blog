@@ -12,7 +12,7 @@ export default function Hero() {
           
                   <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:mt-6 xl:text-6xl">
                     <span className="block">SaaS Developer</span>
-                    <span className="block text-[#00AEEF]">Indie Hacker</span>
+                    <span className="block text-[#00AEEF]">Indie Maker</span>
                   </h1>
                   <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                   Sharing what I learn about SaaS dev, self improvement & focused work to get more done in less time | Building MacroFlex.

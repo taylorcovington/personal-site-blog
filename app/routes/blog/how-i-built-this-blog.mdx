@@ -1,9 +1,9 @@
 ---
-title: How I built this blog using Remix, MDX, and Vercel
+title: How I built this blog using Remix, MDX, and Netlify
 date: 2022-03-31
 meta: 
-  title: How I built this blog
-  description: This is a quick blog post on how I build this blog using Remix, MDX, and Vercel
+  title: How I built this blog using Remix, MDX, and Netlify
+  description: This is a quick blog post on how I build this blog using Remix, MDX, and Netlify
   author: Taylor Covington
   uploadDate: 2022-03-31
   readTime: 5
@@ -13,8 +13,175 @@ meta:
 import PostHeading from '../../components/blog/PostHeading.tsx'
 
 <div className="prose lg:prose-xl">
-  <PostHeading  title={attributes.title} tag={'React'} />
+  <PostHeading  title={attributes.title} tag={"development"} />
 
-  Coming soon! Stay tuned.
+In an increasingly digital world, online creators have become a driving force in content creation. 
+Whether you're a writer, marketer, developer, or entrepreneur, having a blog website has become an essential tool for establishing your online presence and connecting with your audience. 
+In this blog post, we will explore the significance of having a dynamic blog website, and how the powerful combination of Remix and MDX can help you create a compelling platform to showcase your talent, expertise, and ideas.
+
+  ### Why this stack?
+ 
+#### Harnessing the Power of Remix:
+Remix, a JavaScript library, brings server-rendering to the table, enabling faster page loads and improved SEO. By utilizing Remix, we can create a blog website that provides a seamless user experience while ensuring search engines can effectively index our content. With server-side rendering, initial page loads are optimized, resulting in quicker load times and increased user engagement.
+
+#### Leveraging MDX for Interactive Content:
+MDX combines the simplicity of Markdown with the power of JSX, allowing us to create highly interactive and dynamic content within our blog posts. With MDX, we can embed React components, import external libraries, and even include interactive charts or data visualizations directly within our Markdown-based content. This fusion of Markdown and JSX empowers us to write code and documentation in one place, promoting better code reuse, readability, and maintainability.
+
+#### Component-Driven Development:
+Both Remix and MDX follow a component-driven approach. Remix allows us to create reusable components for layout, navigation, and data fetching. We can easily manage our blog's structure and routing using Remix's declarative route configurations. On the other hand, MDX allows us to break down our content into modular components, enhancing code reusability and making it easier to maintain and update our blog posts. This component-driven development approach promotes consistency, scalability, and easier collaboration among team members.
+
+#### Customization and Extensibility:
+Remix and MDX offer extensive customization and extensibility options. With Remix, we can define custom loaders, hooks, and middleware to tailor our blog website's functionality to our specific requirements. Similarly, MDX allows us to customize the rendering of Markdown content by defining our own components, layouts, and styles. This flexibility empowers us to create a blog website that aligns with our branding, design choices, and unique features.
+
+#### Integration and Ecosystem:
+Remix and MDX integrate seamlessly with various tools and libraries in their respective ecosystems. Remix is framework-agnostic, enabling integration with popular JavaScript frameworks like React, Vue, or Angular. This flexibility allows us to leverage Remix's benefits without being locked into a specific framework. Similarly, MDX has a vibrant ecosystem with a range of compatible editors, previewers, and static site generators. We can choose the tools that best suit our development workflow and take advantage of community-contributed components, themes, and starters to accelerate our development process.
+
+  ### Building The Project
+  
+  To get started, let's create the Remix project.
+
+ 1. Run `npx create-remix@latest`
+ 2. Fill in the following:
+ - Where would you like to create your app? `./your-project-folder`
+ - What type of app do you want to create? `Just the basics`
+ - Where do you want to deploy? `Netlify`
+ (you can choose many options here, we'll go with Netlify tho)
+
+ 3. Choose `y` to run  `npm install`
+4. `cd` into the project and open it in your code editor
+
+### Making your first blog route
+Since remix includes file based routing you can start adding new routes right away. So let's do it!
+
+1. In the `app/routes` directory, create a new folder called `blog`
+2. Inside that new folder create a file called `first-post.mdx`
+
+Sweet! That's all you have to do! Let's check it out.
+
+Open up your terminal run `npm run dev` to start the project, then go to [http://localhost:3000/blog/first-post](http://localhost:3000/blog/first-post)
+
+Vuala!
+
+Now that's cool and all, but let's talk about styling next.
+
+### Add Syntax Highlighting
+Two libraries that you can use:
+1. [prismjs.com](prismjs.com)
+2. [highlightjs.com](highlightjs.com)
+
+how to acheive syntax hylighting, using plugins.
+
+transforming markdown to html.
+
+There are two types of plugins: 
+1. remark plugins transforms markdown
+2. rehype is an html processor
+
+We are going to install a rehype plugin, `npm install rehype-highlight`
+
+Once this is installed, open up `remix.config.js` and add in the following code: 
+
+(Here's also a preview of what we're adding in right now! 👇)
+
+```js
+  mdx: async filename => {
+    const [rehypeHighlight] = await Promise.all([
+      import("rehype-highlight").then(mod => mod.default),
+    ])
+    return {
+      rehypePlugins: [rehypeHighlight],
+    }
+  }
+```
+
+### Remix Layout routes
+
+One of my favorite things about Remix is the layout route. This allows you to
+build a reusable layout for the blog posts!
+
+In our case, we want to use this file to add the highlightjs code syntax highlighting to all blog posts.
+
+The great thing about highlightjs is it comes with a ton of different syntax styles. 
+
+Here's how to look at your options: 
+1. node_modules
+2. hightlightjs folder
+4. styles folder
+3. see all the options
+
+
+1. add a new file in your `/routes` directory called `blog.tsx`
+2. add the following code: 
+
+```js
+import styles from 'highlight.js/styles/atom-one-dark.css'
+import { Outlet } from "@remix-run/react";
+import { LinksFunction } from "@remix-run/node"
+
+export const links: LinksFunction = () => {
+  return [
+    {
+      rel: 'stylesheet',
+      href: styles
+    }
+  ]
+}
+
+export default function Blog() {
+  return (
+    <div className='flex justify-center mt-6'>
+      <Outlet />
+    </div>
+  )
+}
+```
+
+
+### How I styled this blog
+
+This side uses TailwindCSS. Why? 
+
+How to get this setup - it was NOT simple. 
+
+1. run `npm install -D tailwindcss/typography concurrently`
+2. run `npx tailwindcss init` to create your tailwind.config.js file
+3. Add the following to this file: 
+```js
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
+}
+```
+4. Add the following to your `package.json` file in the `scripts` section
+```
+    "build": "npm run build:css && remix build",
+    "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
+    "dev": "concurrently \"npm run dev:css\" \"cross-env NODE_ENV=development netlify dev\"",
+    "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
+    "postinstall": "remix setup node"
+```
+5. add a new styles folder in the root of the project
+6. add a app.css file in the `/styles` folder
+7. In the `root.tsx` folder add the following: 
+```js
+import type { LinksFunction } from "@remix-run/node"
+
+export const links: LinksFunction = () => {
+  return [
+    {
+      rel: 'stylesheet',
+      href: styles
+    }
+  ]
+}
+```
+
 
 </div>

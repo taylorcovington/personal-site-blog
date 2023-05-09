@@ -9,7 +9,7 @@ export default function LatestPosts({ posts }: LatestPostProps) {
   return (
     <BlogPostPreviewGrid
       heading="From the blog"
-      subheading="You'll find posts about frontend development, career tips, and dev resources."
+      subheading="You'll find posts about SaaS development, health, and my personal journey."
       posts={posts}
       archiveUrl="/blog"
     />

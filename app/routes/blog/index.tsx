@@ -4,6 +4,7 @@ import { LoaderFunction } from "@remix-run/node"
 import * as postOne from './how-i-built-this-blog.mdx'
 import * as postTwo from './five-soft-skills.mdx'
 import * as postThree from './increase-productivity-in-5-steps.mdx'
+import * as postFour from './why-you-should-rest.mdx'
 
 function postFromModule(mod: any) {
   return {
@@ -16,7 +17,8 @@ export const loader: LoaderFunction = () => {
   return [
     postFromModule(postOne), 
     postFromModule(postTwo),
-    postFromModule(postThree)
+    postFromModule(postThree),
+    postFromModule(postFour)
   ]
 }
 
